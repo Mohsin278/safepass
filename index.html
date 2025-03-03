@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </span>
+                <span class="logo-text">Safe<span class="logo-accent">Pass</span></span>
+            </div>
+            <div class="social-links">
+                <a href="mailto:mohsinmanzoor714@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/mohsin_714?igsh=MWZmbXFkdWZvcWM0Nw==" target="_blank" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/securepasspro" target="_blank" class="social-link" title="X (Twitter)">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/Mohsin278" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Password Strength Checker</h1>
+            <p>Check how strong your password is and get real-time feedback</p>
+        </header>
+
+        <div class="card">
+            <div class="password-input-container">
+                <input type="password" id="password" class="password-input" 
+                       placeholder="Enter your password" autofocus>
+                <button type="button" id="togglePassword" class="toggle-password" 
+                        aria-label="Toggle password visibility">Show</button>
+            </div>
+
+            <div class="strength-meter">
+                <div class="strength-meter-fill" id="strength-meter-fill"></div>
+            </div>
+
+            <div class="strength-text">
+                <span id="strength-label">Strength: </span>
+                <span id="strength-score">0/100</span>
+            </div>
+
+            <div class="time-to-crack" id="time-to-crack">
+                Enter a password to see how long it would take to crack
+            </div>
+
+            <div class="criteria-list">
+                <div class="criteria-item">
+                    <div class="criteria-icon pending" id="length-icon">✓</div>
+                    <span>At least 12 characters</span>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon pending" id="uppercase-icon">✓</div>
+                    <span>Uppercase letters</span>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon pending" id="lowercase-icon">✓</div>
+                    <span>Lowercase letters</span>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon pending" id="numbers-icon">✓</div>
+                    <span>Numbers</span>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon pending" id="special-icon">✓</div>
+                    <span>Special characters</span>
+                </div>
+                <div class="criteria-item">
+                    <div class="criteria-icon pending" id="patterns-icon">✓</div>
+                    <span>No common patterns</span>
+                </div>
+            </div>
+
+            <div class="password-generator">
+                <button id="generate-password" class="btn-generate">Generate Strong Password</button>
+                <button id="copy-password" class="btn-copy">Copy</button>
+            </div>
+        </div>
+
+        <div class="card guidelines">
+            <h3>How to Create a Strong Password</h3>
+            <ul>
+                <li><strong>Use at least 12 characters:</strong> The longer your password, the more secure it is.</li>
+                <li><strong>Mix character types:</strong> Include uppercase letters, lowercase letters, numbers, and special characters.</li>
+                <li><strong>Avoid personal information:</strong> Don't use names, birthdays, or any information that could be easily guessed.</li>
+                <li><strong>Don't use common patterns:</strong> Avoid keyboard patterns (qwerty), repeating characters (aaa), or sequential numbers (123).</li>
+                <li><strong>Use unique passwords:</strong> Never reuse passwords across different accounts.</li>
+                <li><strong>Consider using passphrases:</strong> A sequence of random words can be both secure and memorable.</li>
+            </ul>
+            
+            <h3>Why Password Strength Matters</h3>
+            <div class="info-text">
+                <p>
+                    Modern computers can attempt billions of password combinations per second. A weak password 
+                    that seems complex to you might be cracked in seconds by automated hacking tools. Strong 
+                    passwords are your first line of defense against unauthorized access to your accounts and 
+                    personal information.
+                </p>
+                <p>
+                    Remember that even the strongest password isn't effective if you share it, write it down in 
+                    an insecure location, or reuse it across multiple sites. Consider using a password manager 
+                    to securely store unique, complex passwords for all your accounts.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>Designed & Developed by <span class="developer-name">Mohsin Manzoor</span></p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/Mohsin278" target="_blank" class="footer-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohsin-manzoor-a1a03a312/" target="_blank" class="footer-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/passwordStrength.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
